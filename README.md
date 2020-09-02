@@ -4,6 +4,15 @@ A Yii Framework Component in order to work with LUYA headless REST Client
 
 > Based on LUYA Headless Library which is similar to Yii Active Record but for any REST API.
 
+It works with Yii Framework out of the box, therefore those things are included:
+
++ Use `fields` in your requests
++ Use `sort` in your requests
++ Working with `expand`
++ Caching
++ CRUD (Create new records, Read records, Update records, Delete records) API operations
++ Similar to Yii Framework Active Query and Active Record
+
 ## Installation
 
 
@@ -14,13 +23,14 @@ Configure your API Client:
 ```php
 'components' => [
     'api' => [
+        'class' => 'Nadar\YiiRestClient\Api',
         'server' => 'https://myapi.com',
         'accessToken' => '...',
     ]
 ]
 ``` 
 
-Now add your Rest Model (Active Endpoint):
+Now add your Rest Model (Active Endpoint), this represents the Model on the client side. It provides basic getter and setter methods same as Yii Framework.
 
 
 ```php

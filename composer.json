@@ -12,7 +12,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "\\Nadar\\YiiRestClient\\" : "src"
+            "Nadar\\YiiRestClient\\" : "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nadar\\YiiRestClient\\Tests\\" : "tests"
         }
     },
     "authors": [

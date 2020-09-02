@@ -8,9 +8,22 @@ use luya\headless\base\AfterRequestEvent;
 use luya\headless\base\BeforeRequestEvent;
 use luya\headless\Client;
 
+/**
+ * Api
+ * 
+ * @property Client $client
+ * 
+ * @author Basil Suter <git@nadar.io>
+ * @since 1.0.0
+ */
 class Api extends Component
 {
     public $server;
+
+    /**
+     * @var string Example would be `v1/`
+     */
+    public $endpointPrefix;
 
     public $accessToken;
 
@@ -22,7 +35,8 @@ class Api extends Component
     public function getClient()
     {
         if ($this->_client === null) {
-            $this->_client = new Client($this->token, $this->url);
+            $this->_client = new Client($this->accessToken, $this->server);
+            $this->_client->endpointPrefix = $this->endpointPrefix;
             
         }
 
