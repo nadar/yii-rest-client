@@ -1,0 +1,30 @@
+{
+    "name": "nadar/yii-rest-client",
+    "description": "A Yii Framework Component REST Client",
+    "type": "library",
+    "require": {
+        "luyadev/luya-headless": "^2.7",
+        "yiisoft/yii2": "^2.0"
+    },
+    "require-dev": {
+        "luyadev/luya-testsuite": "^1.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "\\Nadar\\YiiRestClient" : "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Basil Suter",
+            "email": "git@nadar.io"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
