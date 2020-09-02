@@ -2,15 +2,17 @@
 
 namespace Nadar\YiiRestClient;
 
-use luya\headless\Client;
 use Yii;
 use yii\base\Component;
+use luya\headless\base\AfterRequestEvent;
+use luya\headless\base\BeforeRequestEvent;
+use luya\headless\Client;
 
 class Api extends Component
 {
-    public $url;
+    public $server;
 
-    public $token;
+    public $accessToken;
 
     /**
      * @var Client
@@ -36,5 +38,4 @@ class Api extends Component
 
         return $this->_client;
     }
-
 }
