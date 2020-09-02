@@ -13,8 +13,17 @@ It works with Yii Framework out of the box, therefore those things are included:
 + CRUD (Create new records, Read records, Update records, Delete records) API operations
 + Similar to Yii Framework Active Query and Active Record
 
+![Tests](https://github.com/nadar/yii-rest-client/workflows/Tests/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8c712b4f0d9dde1f0383/maintainability)](https://codeclimate.com/github/nadar/yii-rest-client/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/8c712b4f0d9dde1f0383/test_coverage)](https://codeclimate.com/github/nadar/yii-rest-client/test_coverage)
+
 ## Installation
 
+Installation via composer
+
+```sh
+composer require nadar/yii-rest-client
+```
 
 ## Usage
 
