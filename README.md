@@ -25,7 +25,7 @@ Installation via composer
 composer require nadar/yii-rest-client
 ```
 
-## Usage
+## Usage & Dokumentation
 
 Configure your API Client:
 
@@ -38,6 +38,8 @@ Configure your API Client:
     ]
 ]
 ``` 
+
+> **To see all LUYA Headless functions see the [LUYA Headless Documentation](https://github.com/luyadev/luya-headless)**
 
 Now add your Rest Model (Active Endpoint), this represents the Model on the client side. It provides basic getter and setter methods same as Yii Framework.
 
@@ -82,6 +84,8 @@ Add new entry (will make a POST request):
 
 ```php
 $car = new ApiCars();
-$car->name;
+$car->name = 'Honda';
 $car->save(Yii::$app->api->client);
 ```
+
+> **To see all LUYA Headless functions see the [LUYA Headless Documentation](https://github.com/luyadev/luya-headless)**
