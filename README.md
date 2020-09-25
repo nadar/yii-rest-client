@@ -1,8 +1,6 @@
 # Yii Framework REST Client
 
-A Yii Framework Component in order to work with LUYA headless REST Client
-
-> Based on LUYA Headless Library which is similar to Yii Active Record but for any REST API.
+A Yii Framework Component in order to work with the LUYA headless REST Client. The LUYA REST Client is an Active Record similar solution for REST Clients.
 
 It works with Yii Framework out of the box, therefore those things are included:
 

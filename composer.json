@@ -1,6 +1,6 @@
 {
     "name": "nadar/yii-rest-client",
-    "description": "A Yii Framework Component REST Client",
+    "description": "A Yii Framework Component in order to work with the LUYA headless REST Client. The LUYA REST Client is an Active Record similar solution for REST Clients.",
     "type": "library",
     "require": {
         "luyadev/luya-headless": "^2.7",

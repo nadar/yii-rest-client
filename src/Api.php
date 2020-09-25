@@ -9,7 +9,27 @@ use luya\headless\base\BeforeRequestEvent;
 use luya\headless\Client;
 
 /**
- * Api
+ * Api Component
+ * 
+ * The API Component contains the server and token informations which then can be used in ActiveEndpoints.
+ * 
+ * Configuration
+ * 
+ * ```php
+ * 'components' => [
+ *     'api' => [
+ *         'class' => 'Nadar\YiiRestClient\Api',
+ *         'server' => 'https://myapi.com',
+ *         'accessToken' => '...',
+ *     ]
+ * ]
+ * ```
+ * 
+ * Example Request
+ * 
+ * ```php
+ * MyTestEndpoint::find()->all(Yii::$app->api-client);
+ * ```
  * 
  * @property Client $client
  * 
@@ -18,13 +38,19 @@ use luya\headless\Client;
  */
 class Api extends Component
 {
+    /**
+     * @var string The server URL which contains the REST API. f.e. `https://luya.io`
+     */
     public $server;
 
     /**
-     * @var string Example would be `v1/`
+     * @var string A prefix which will be added to the server url when endpoitName is `{{%my-endpoint-name}}`, example would be `v1/`
      */
     public $endpointPrefix;
 
+    /**
+     * @var string The access token to authenticate on the server. It will be taken as Bearer Token in the Header
+     */
     public $accessToken;
 
     /**
@@ -32,6 +58,9 @@ class Api extends Component
      */
     private $_client;
 
+    /**
+     * @return Client
+     */
     public function getClient()
     {
         if ($this->_client === null) {
