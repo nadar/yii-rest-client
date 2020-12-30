@@ -44,7 +44,8 @@ class Api extends Component
     public $server;
 
     /**
-     * @var string A prefix which will be added to the server url when endpoitName is `{{%my-endpoint-name}}`, example would be `v1/`
+     * @var string A prefix which will be added to the server url when endpoitName is `{{%my-endpoint-name}}`, example would be `v1/`. When working
+     * with LUYA admin APIs the endpointPrefix would be `admin/`.
      */
     public $endpointPrefix;
 
